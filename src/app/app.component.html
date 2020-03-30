@@ -1,8 +1,27 @@
-<div class="container">
-   <form [formGroup] = "formdata" (ngSubmit) = "onClickSubmit
+
+
+<div>
+   <form [formGroup] = "formdata" (ngSubmit) = "onClickSubmit(formdata.value)" >
+    <span>Task Tile</span>&nbsp;&nbsp;&nbsp;  <input type = "text" class = "fortextbox" name = "title" placeholder = "title" 
+         formControlName="title">
+      <br/>
       
-         
- 
+     <span>Task Description</span> &nbsp;&nbsp;&nbsp; <input type = "text" class = "fortextbox" name="desc" 
+         placeholder = "desc" formControlName = "desc">
+      <br/>
+    <span>start Date</span> &nbsp;&nbsp;&nbsp; <input type = "text" class = "fortextbox" name = "startDate" placeholder = "startDate" 
+         formControlName="startDate">
+      <br/>
+      
+     <span>End Date</span>&nbsp;&nbsp;&nbsp; <input type = "text" class = "fortextbox" name="endDate" 
+         placeholder = "endDate" formControlName = "endDate">
+      <br/>
+      <input type = "submit" class = "forsubmit" value = "Save">
+   </form>
+</div>
+
+<div class="container">
+    
           
   <table class="table">
     <thead>
@@ -14,19 +33,15 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><input type = "text" class = "fortextbox" name = "emailid" placeholder = "emailid" 
-         formControlName="emailid"></td>
-        <td><input type = "text" class = "fortextbox" name = "emailid" placeholder = "emailid" 
-         formControlName="emailid"></td>
-        <td><input type = "text" class = "fortextbox" name = "emailid" placeholder = "emailid" 
-         formControlName="emailid"></td>
-        <td><input type = "text" class = "fortextbox" name = "emailid" placeholder = "emailid" 
-         formControlName="emailid"></td>
+      <tr *ngFor="let todo of todoList">
+        <td>{{todo.title}}</td>
+        <td>{{todo.start}}</td>
+        <td>{{todo.end}}</td>
+        <td>{{todo.status}}</td>
       </tr>
       
     </tbody>
   </table>
-  <input type = "submit" class = "forsubmit" value = "Log In">
-   </form>
+  
+  
 </div>

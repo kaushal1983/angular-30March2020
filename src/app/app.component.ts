@@ -13,18 +13,23 @@ export class AppComponent  {
   endDate;
   status;
   todoList =[
-{'title':'title 1', 'desc':'description 1', 'start': '13/02/2020', 'end': '13/02/2020', 'status': 'Done'},
+{'title':'title 1', 'desc':'description 1', 'startDate': '13/02/2020', 'endDate': '13/02/2020', 'status': 'Done'},
 
-{'title':'title 2', 'desc':'description 2', 'start': '13/02/2020', 'end': '20/02/2020', 'status': 'WIP'}
+{'title':'title 2', 'desc':'description 2', 'startDate': '13/02/2020', 'endDate': '20/02/2020', 'status': 'WIP'}
 
 ];
 
 ngOnInit() {
      
       this.formdata = new FormGroup({
-         emailid: new FormControl("angular@gmail.com"),
-         passwd: new FormControl("abcd1234")
+         title: new FormControl(""),
+         desc: new FormControl(""),
+         startDate: new FormControl(""),
+         endDate: new FormControl("")
       });
    }
-   onClickSubmit(data) {this.emailid = data.emailid;}
+   onClickSubmit(data) {
+     this.todoList.push(data)
+     
+     }
 }
