@@ -1,13 +1,32 @@
-<div>
-   <form [formGroup] = "formdata" (ngSubmit) = "onClickSubmit(formdata.value)" >
-      <input type = "text" class = "fortextbox" name = "emailid" placeholder = "emailid" 
-         formControlName="emailid">
-      <br/>
+<div class="container">
+   <form [formGroup] = "formdata" (ngSubmit) = "onClickSubmit
       
-      <input type = "password" class = "fortextbox" name="passwd" 
-         placeholder = "passwd" formControlName = "passwd">
-      <br/>
+         
+ 
+          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Task Title</th>
+        <th>Start date</th>
+        <th>End Date</th>
+        <th>Satus</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type = "text" class = "fortextbox" name = "emailid" placeholder = "emailid" 
+         formControlName="emailid"></td>
+        <td><input type = "text" class = "fortextbox" name = "emailid" placeholder = "emailid" 
+         formControlName="emailid"></td>
+        <td><input type = "text" class = "fortextbox" name = "emailid" placeholder = "emailid" 
+         formControlName="emailid"></td>
+        <td><input type = "text" class = "fortextbox" name = "emailid" placeholder = "emailid" 
+         formControlName="emailid"></td>
+      </tr>
       
-      <input type = "submit" class = "forsubmit" value = "Log In">
+    </tbody>
+  </table>
+  <input type = "submit" class = "forsubmit" value = "Log In">
    </form>
 </div>
