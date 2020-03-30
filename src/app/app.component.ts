@@ -13,7 +13,7 @@ export class AppComponent  {
   endDate;
   status;
   todoList =[
-{'title':'title 1', 'desc':'description 1', 'startDate': '13/02/2020', 'endDate': '13/02/2020', 'status': 'Done'},
+{'title':'title 1', 'desc':'description 1', 'c': '13/02/2020', 'endDate': '13/02/2020', 'status': 'Done'},
 
 {'title':'title 2', 'desc':'description 2', 'startDate': '13/02/2020', 'endDate': '20/02/2020', 'status': 'WIP'}
 
